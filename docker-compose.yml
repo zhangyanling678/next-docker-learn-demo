@@ -10,7 +10,10 @@ services:
     ports:
       - '6379:6379'
     command: redis-server
+    # command: redis-server /etc/redis/redis.conf
     volumes:
+      # - redis-data:/data
+      # - ./redis:/etc/redis
       - ./redis/data:/data
     
   nextapp:
