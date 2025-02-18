@@ -1,12 +1,11 @@
-/* eslint-disable @next/next/no-async-client-component */
 "use client";
 
 import dayjs from "dayjs";
 
-export default async function NoteList({ notes }) {
+export default function NoteList({ notes }) {
   const arr = Object.entries(notes);
 
-  if (arr.length == 0) {
+  if (arr.length === 0) {
     return <div className="notes-empty">{"No notes created yet!"}</div>;
   }
 
